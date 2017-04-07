@@ -1,0 +1,46 @@
+
+//html który wyświelta formularz do wprowadzania danych
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Podaj dane </h1>
+
+<form action="/people/display" method="post">
+
+
+    <label>Imię:</label>
+    <input type="text" name="name"/>
+    <label>Nazwisko:</label>
+    <input type="text" name="surname"/>
+
+
+    <input type="submit" value="Add"/>
+
+
+
+</form><br>
+
+
+
+<form action="/people/find" method="post">
+
+
+    <label>Znajdź użytkownika po surname:</label>
+    <input type="text" name="surname"/>
+
+    <input type="submit" value="Add"/>
+
+
+</form><br>
+
+
+<a href="/people/list">Zobacz wszystkich użytkowników</a>
+
+
+</body>
+</html>

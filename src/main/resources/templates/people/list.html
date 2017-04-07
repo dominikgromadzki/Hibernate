@@ -1,0 +1,34 @@
+<!DOCTYPE html> // tu piszemy htmla do wyświetlania zawartości wszystkich użytkowników w bazie do której link jest w add.html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Lista wszystkich użytkowników </h1>
+
+<p style="color:green;" th:text="${message}"/>
+
+<table>
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Delete</th>
+    </tr>
+
+    <tr th:each="person:${people}">
+        <td th:text="${person.id}"/>
+        <td th:text="${person.name}"/>
+        <td th:text="${person.surname}"/>
+        <td>
+            <a data-confirm="Are you sure?" th:href="@{/people/{id}(id=${person.id})}">
+                Delete
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>
